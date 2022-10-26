@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\..\FrameXML\UI.xsd">
 	<Script file="src/windows/mega-macro.window.lua"/>
-	<CheckButton name="MegaMacro_ButtonTemplate" inherits="PopupButtonTemplate" virtual="true">
+	<CheckButton name="MegaMacro_ButtonTemplate" inherits="SelectorButtonTemplate" virtual="true">
 		<Scripts>
 			<OnLoad>self:RegisterForDrag("LeftButton");</OnLoad>
 			<OnClick>MegaMacro_MacroButton_OnClick(self);</OnClick>
@@ -551,7 +551,7 @@
 				</Scripts>
 				<FontString inherits="ChatFontNormal"/>
 			</EditBox>
-			<ScrollFrame name="MegaMacro_PopupScrollFrame" inherits="ListScrollFrameTemplate">
+			<ScrollFrame name="MegaMacro_PopupScrollFrame" inherits="UIPanelScrollFrameTemplate2">
 				<Size x="485" y="389"/>
 				<Anchors>
 					<Anchor point="BOTTOMRIGHT" relativeTo="MegaMacro_PopupFrame" x="-36" y="48"/>
