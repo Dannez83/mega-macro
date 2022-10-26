@@ -315,7 +315,7 @@
 				<Scripts>
 					<OnLoad>
 						PanelTemplates_TabResize(self, -8);
-						_G[self:GetName().."HighlightTexture"]:SetWidth(55);
+<!--						_G[self:GetName().."HighlightTexture"]:SetWidth(55);-->
 					</OnLoad>
 					<OnClick>
 						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -331,7 +331,7 @@
 				<Scripts>
 					<OnLoad>
 						PanelTemplates_TabResize(self, 35);
-						_G[self:GetName().."HighlightTexture"]:SetWidth(103);
+<!--						_G[self:GetName().."HighlightTexture"]:SetWidth(103);-->
 					</OnLoad>
 					<OnClick>
 						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -347,7 +347,7 @@
 				<Scripts>
 					<OnLoad>
 						PanelTemplates_TabResize(self, 20);
-						_G[self:GetName().."HighlightTexture"]:SetWidth(82);
+<!--						_G[self:GetName().."HighlightTexture"]:SetWidth(82);-->
 					</OnLoad>
 					<OnClick>
 						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -363,7 +363,7 @@
 				<Scripts>
 					<OnLoad>
 						PanelTemplates_TabResize(self, 20);
-						_G[self:GetName().."HighlightTexture"]:SetWidth(112);
+<!--						_G[self:GetName().."HighlightTexture"]:SetWidth(112);-->
 					</OnLoad>
 					<OnClick>
 						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
@@ -379,7 +379,7 @@
 				<Scripts>
 					<OnLoad>
 						PanelTemplates_TabResize(self, 60);
-						_G[self:GetName().."HighlightTexture"]:SetWidth(190);
+<!--						_G[self:GetName().."HighlightTexture"]:SetWidth(190);-->
 					</OnLoad>
 					<OnClick>
 						PlaySound(SOUNDKIT.IG_MAINMENU_OPTION_CHECKBOX_ON);
