@@ -308,7 +308,7 @@
 					<Anchor point="TOPLEFT" relativeTo="MegaMacro_Frame" x="6" y="-289"/>
 				</Anchors>
 			</Frame>
-			<Button name="MegaMacro_FrameTab1" inherits="TabButtonTemplate" text="Global" id="1">
+			<Button name="MegaMacro_FrameTab1" inherits="PanelTabButtonTemplate" text="Global" id="1">
 				<Anchors>
 					<Anchor point="TOPLEFT" x="51" y="-28"/>
 				</Anchors>
@@ -324,7 +324,7 @@
 					<OnReceiveDrag>MegaMacro_FrameTab_OnReceiveDrag(self);</OnReceiveDrag>
 				</Scripts>
 			</Button>
-			<Button name="MegaMacro_FrameTab2" inherits="TabButtonTemplate" text="{Class}" id="2">
+			<Button name="MegaMacro_FrameTab2" inherits="PanelTabButtonTemplate" text="{Class}" id="2">
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="MegaMacro_FrameTab1" relativePoint="RIGHT" x="0" y="0"/>
 				</Anchors>
@@ -340,7 +340,7 @@
 					<OnReceiveDrag>MegaMacro_FrameTab_OnReceiveDrag(self);</OnReceiveDrag>
 				</Scripts>
 			</Button>
-			<Button name="MegaMacro_FrameTab3" inherits="TabButtonTemplate" text="{Spec}" id="3">
+			<Button name="MegaMacro_FrameTab3" inherits="PanelTabButtonTemplate" text="{Spec}" id="3">
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="MegaMacro_FrameTab2" relativePoint="RIGHT" x="0" y="0"/>
 				</Anchors>
@@ -356,7 +356,7 @@
 					<OnReceiveDrag>MegaMacro_FrameTab_OnReceiveDrag(self);</OnReceiveDrag>
 				</Scripts>
 			</Button>
-			<Button name="MegaMacro_FrameTab4" inherits="TabButtonTemplate" text="{Character}" id="4">
+			<Button name="MegaMacro_FrameTab4" inherits="PanelTabButtonTemplate" text="{Character}" id="4">
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="MegaMacro_FrameTab3" relativePoint="RIGHT" x="0" y="0"/>
 				</Anchors>
@@ -372,7 +372,7 @@
 					<OnReceiveDrag>MegaMacro_FrameTab_OnReceiveDrag(self);</OnReceiveDrag>
 				</Scripts>
 			</Button>
-			<Button name="MegaMacro_FrameTab5" inherits="TabButtonTemplate" text="{Character Spec}" id="5">
+			<Button name="MegaMacro_FrameTab5" inherits="PanelTabButtonTemplate" text="{Character Spec}" id="5">
 				<Anchors>
 					<Anchor point="LEFT" relativeTo="MegaMacro_FrameTab4" relativePoint="RIGHT" x="0" y="0"/>
 				</Anchors>
