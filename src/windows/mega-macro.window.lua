@@ -151,7 +151,7 @@ local function RefreshSelectedMacroIcon()
 		end
 	end
 
---	MegaMacro_FrameSelectedMacroButtonIcon:SetTexture(displayedTexture)
+	MegaMacro_FrameSelectedMacroButtonIcon:SetTexture(displayedTexture)
 end
 
 local function SelectIcon(texture)
@@ -177,7 +177,7 @@ local function SelectMacro(macro)
 	SelectedMacro = nil
 	MegaMacro_PopupFrame:Hide()
 	MegaMacro_FrameSelectedMacroName:SetText("")
---	MegaMacro_FrameSelectedMacroButtonIcon:SetTexture("")
+	MegaMacro_FrameSelectedMacroButtonIcon:SetTexture("")
 	MegaMacro_FrameText:SetText("")
 	MegaMacro_EditButton:Disable();
 	MegaMacro_DeleteButton:Disable();
@@ -192,7 +192,7 @@ local function SelectMacro(macro)
 			buttonFrame:SetChecked(true)
 			SelectedMacro = macro
 			MegaMacro_FrameSelectedMacroName:SetText(macro.DisplayName)
---			MegaMacro_FrameSelectedMacroButtonIcon:SetTexture(buttonIcon:GetTexture())
+			MegaMacro_FrameSelectedMacroButtonIcon:SetTexture(buttonIcon:GetTexture())
 			MegaMacro_FrameText:SetText(macro.Code)
 			MegaMacro_EditButton:Enable();
 			MegaMacro_DeleteButton:Enable();
@@ -225,8 +225,8 @@ local function SetMacroItems()
 		if macro then
 			buttonFrame.Macro = macro
 			buttonFrame.IsNewButton = false
-			buttonFrame:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
---			buttonName:SetText(macro.DisplayName)
+			-- buttonFrame:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+			buttonName:SetText(macro.DisplayName)
 			local data = MegaMacroIconEvaluator.GetCachedData(macro.Id)
 			buttonIcon:SetTexture(data and data.Icon)
 			buttonIcon:SetDesaturated(false)
@@ -235,8 +235,8 @@ local function SetMacroItems()
 		elseif not newMacroButtonCreated then
 			buttonFrame.Macro = nil
 			buttonFrame.IsNewButton = true
-			buttonFrame:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
---			buttonName:SetText("")
+			-- buttonFrame:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square", "ADD")
+			buttonName:SetText("")
 			buttonIcon:SetTexture(PlusTexture)
 			buttonIcon:SetDesaturated(true)
 			buttonIcon:SetTexCoord(.08, .92, .08, .92)
@@ -245,8 +245,8 @@ local function SetMacroItems()
 		else
 			buttonFrame.Macro = nil
 			buttonFrame.IsNewButton = false
---			buttonFrame:SetHighlightTexture(nil)
---			buttonName:SetText("")
+			-- buttonFrame:SetHighlightTexture(nil)
+			buttonName:SetText("")
 			buttonIcon:SetTexture("")
 			buttonIcon:SetDesaturated(false)
 			buttonIcon:SetTexCoord(0, 1, 0, 1)
@@ -737,28 +737,28 @@ function MegaMacro_IconSearchBox_TextChanged()
 end
 
 MegaMacroLastShiftClickInsertAt = nil
-hooksecurefunc("SpellButton_OnModifiedClick", function(self)
-	-- for some reason this callback is triggered twice, this will prevent that
-	if MegaMacroSystemTime == MegaMacroLastShiftClickInsertAt then
-		return
-	end
+-- hooksecurefunc("SpellButton_OnModifiedClick", function(self)
+-- 	-- for some reason this callback is triggered twice, this will prevent that
+-- 	if MegaMacroSystemTime == MegaMacroLastShiftClickInsertAt then
+-- 		return
+-- 	end
 
-	MegaMacroLastShiftClickInsertAt = MegaMacroSystemTime
+-- 	MegaMacroLastShiftClickInsertAt = MegaMacroSystemTime
 
-	local slot = SpellBook_GetSpellBookSlot(self);
-	if ( slot > MAX_SPELLS ) then
-		return
-	end
+-- 	local slot = SpellBook_GetSpellBookSlot(self);
+-- 	if ( slot > MAX_SPELLS ) then
+-- 		return
+-- 	end
 
-	if IsModifiedClick("CHATLINK") and MegaMacro_FrameText:HasFocus() then
-		local spellName, subSpellName = GetSpellBookItemName(slot, SpellBookFrame.bookType)
+-- 	if IsModifiedClick("CHATLINK") and MegaMacro_FrameText:HasFocus() then
+-- 		local spellName, subSpellName = GetSpellBookItemName(slot, SpellBookFrame.bookType)
 
-		if spellName and not IsPassiveSpell(slot, SpellBookFrame.bookType) then
-			if subSpellName and string.len(subSpellName) > 0 then
-				MegaMacro_FrameText:Insert(spellName.."("..subSpellName..")")
-			else
-				MegaMacro_FrameText:Insert(spellName)
-			end
-		end
-	end
-end)
+-- 		if spellName and not IsPassiveSpell(slot, SpellBookFrame.bookType) then
+-- 			if subSpellName and string.len(subSpellName) > 0 then
+-- 				MegaMacro_FrameText:Insert(spellName.."("..subSpellName..")")
+-- 			else
+-- 				MegaMacro_FrameText:Insert(spellName)
+-- 			end
+-- 		end
+-- 	end
+-- end)

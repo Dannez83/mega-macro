@@ -9,6 +9,15 @@
 			<OnDragStart>MegaMacro_MacroButton_OnDragStart(self);</OnDragStart>
 			<OnReceiveDrag>MegaMacro_MacroButton_OnReceiveDrag(self);</OnReceiveDrag>
 		</Scripts>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentName" inherits="GameFontHighlightSmall" text="">
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="$parent" x="0" y="-10"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
 	</CheckButton>
 	<CheckButton name="MegaMacro_PopupButtonTemplate" inherits="SimplePopupButtonTemplate" virtual="true">
 		<Scripts>
@@ -146,6 +155,16 @@
 					<OnEnter>MegaMacro_FrameSelectedMacroButton_OnEnter();</OnEnter>
 					<OnLeave>MegaMacro_FrameSelectedMacroButton_OnLeave();</OnLeave>
 				</Scripts>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture name="MegaMacro_FrameSelectedMacroButtonIcon" file="Interface\Buttons\UI-EmptySlot">
+							<Size x="42" y="42"/>
+							<Anchors>
+								<Anchor point="CENTER" relativeTo="$parent" x="0" y="0"/>
+							</Anchors>
+						</Texture>
+					</Layer>
+				</Layers>
 			</CheckButton>
 			<ScrollFrame name="MegaMacro_ButtonScrollFrame" inherits="UIPanelScrollFrameTemplate">
 				<Size x="593" y="146"/>
