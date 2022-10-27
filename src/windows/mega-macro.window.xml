@@ -158,7 +158,7 @@
 				<Layers>
 					<Layer level="ARTWORK">
 						<Texture name="MegaMacro_FrameSelectedMacroButtonIcon" file="Interface\Buttons\UI-EmptySlot">
-							<Size x="42" y="42"/>
+							<Size x="44" y="44"/>
 							<Anchors>
 								<Anchor point="CENTER" relativeTo="$parent" x="0" y="0"/>
 							</Anchors>
@@ -570,7 +570,7 @@
 				</Scripts>
 				<FontString inherits="ChatFontNormal"/>
 			</EditBox>
-			<ScrollFrame name="MegaMacro_PopupScrollFrame" inherits="UIPanelScrollFrameTemplate2">
+			<ScrollFrame name="MegaMacro_PopupScrollFrame" inherits="UIPanelScrollFrameTemplate">
 				<Size x="485" y="389"/>
 				<Anchors>
 					<Anchor point="BOTTOMRIGHT" relativeTo="MegaMacro_PopupFrame" x="-36" y="48"/>
@@ -578,6 +578,11 @@
 				<Scripts>
 					<OnVerticalScroll>FauxScrollFrame_OnVerticalScroll(self, offset, MACRO_ICON_ROW_HEIGHT, MacroPopupFrame_Update);</OnVerticalScroll>
 				</Scripts>
+				<ScrollChild>
+					<Frame name="$parentScrollChildFrame">
+						<Size x="485" y="389"/>
+					</Frame>
+				</ScrollChild>
 			</ScrollFrame>
 		</Frames>
 	</Frame>

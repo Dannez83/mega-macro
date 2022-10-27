@@ -687,7 +687,7 @@ function MegaMacro_PopupFrame_OnUpdate()
 	end
 
 	-- Scrollbar stuff
---	FauxScrollFrame_Update(MegaMacro_PopupScrollFrame, ceil(numMacroIcons / NUM_ICONS_PER_ROW) + 1, NUM_ICON_ROWS, MACRO_ICON_ROW_HEIGHT );
+	FauxScrollFrame_Update(MegaMacro_PopupScrollFrame, ceil(numMacroIcons / NUM_ICONS_PER_ROW) + 1, NUM_ICON_ROWS, MACRO_ICON_ROW_HEIGHT );
 end
 
 function MegaMacro_PopupButton_OnClick(self)
